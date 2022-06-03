@@ -1,0 +1,483 @@
+.app{
+    width: 100%;
+    font-family: "Quicksand", "sans-serif";
+}
+nav{
+    position: absolute;
+    z-index: 100;
+    margin-top: 0.2rem;
+    margin-left: 0.2rem;
+    cursor: pointer;
+    visibility: hidden;
+    /* transition: all 0.5s ease; */
+}
+.clicked div{
+    position: relative;
+    background-color: rgb(67, 67, 67);
+}
+.clicked div:nth-of-type(1){
+    margin-top: 0.6rem;
+    top: 0.1rem;
+    transform: rotate(45deg);
+}
+.clicked div:nth-of-type(3){
+    top: -1rem;
+    transform: rotate(-45deg);
+}
+.clicked div:nth-of-type(2){
+    left: -2.5rem;
+}
+nav div{
+    width: 2rem;
+    height: 0.4rem;
+    margin-bottom: 2.5px;
+    border-radius: 1rem;
+    background-color: rgb(71, 71, 71);
+    /* transition: all 1s ease; */
+}
+
+.sideMenu{
+    width: 20%;
+    height: 100%;
+    z-index: 2;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgb(231, 231, 231);
+    transition: all 0.5s ease;
+}
+
+body{
+    margin: 0;
+}
+.main{
+    padding-left: 20%;
+    width: 80%;
+    overflow-x: hidden;
+}
+.personalInfo{
+    text-align: center;
+}
+.hastages{
+    font-family: "Quicksand", "sans-serif";
+    font-weight: bolder;
+    margin: 2rem 2rem;
+    text-align: center;
+}
+.hastages p{
+    margin: 0;
+    letter-spacing: 1px;
+}
+/* .hastages P:nth-of-type(2){
+    margin-left: 1.2rem;
+}
+.hastages P:nth-of-type(3){
+    margin-left: 2rem;
+} */
+
+.name{
+    letter-spacing: 2px;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-family: 'Aclonica', cursive;
+}
+
+.myimage{
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 2rem;
+}
+
+.myimage img{
+    width: 11rem;
+    height: 11rem;
+}
+.mail{
+    letter-spacing: 1px;
+}
+
+.infoLink{
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.infoLink div{
+    padding-bottom: 0.5rem;
+}
+
+.socialMedia{
+    width: 40%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.socialMedia i{
+    padding: 1rem;
+}
+
+.touch{
+    margin-top: 2rem;
+    margin-left: 20%;
+    font-family: "Quicksand", "sans-serif" !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+/* .sliderContent{
+    
+} */
+
+.slider{
+    position: relative;
+    display: flex;
+    width: 200%;
+    height: 98vh;
+}
+.slider img{
+    width: 80vw;
+    height: 98vh;
+}
+.slide1, .slide2{
+    position: inherit;
+    width: 100%;
+    transition: all 1s ease-in-out;
+    /* visibility: hidden; */
+}
+/* .slide2{
+    visibility: hidden;
+} */
+.selected{
+    transform: translateX(-100%);
+    transition: all 1s ease-in-out;
+}
+.imageText1{
+    position: relative;
+    top: -19rem;
+    color: white;
+    /* transform: translate(-50%, -50%); */
+    left: 46%;
+}
+.slide1 div, .slide2 div{
+    padding-bottom: 1rem;
+    font-weight: bolder;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-family: 'Aclonica', cursive;
+}
+
+.slide1 button, .slide2 button, .touch{
+    font-family: 'Aclonica', cursive;
+    font-size: 1rem;
+    border: 0px solid;
+    width: 9.47rem;
+    height: 2.6rem;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(143,113,133,1) 0%, rgba(136,58,84,1) 100%, rgba(0,212,255,1) 100%);
+    text-align: center;
+    border-radius: 3rem;
+    cursor: pointer;
+    
+}
+
+svg{
+    position: relative;
+    top: 0.15rem;
+}
+.imageText2{
+    text-align: center;
+    position: relative;
+    top: -27rem;
+    left: 30%;
+}
+.sliderbtn{
+    /* text-align: center; */
+    position: relative;
+    left: 52%;
+    top: -1.5rem;
+}
+
+.sliderbtn button{
+    width: 0.5rem;
+    height: 0.7rem;
+    background-color: rgb(169, 169, 169);
+    border: 0 solid;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.selectedbtn{
+    background-color: white !important;
+    box-shadow: 2px 2px 2px black;
+}
+.content{
+    padding-left: 2rem;
+}
+.content div{
+    padding-bottom: 2rem;
+}
+
+h2{
+    font-weight: lighter;
+    opacity: 0.5;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h3{
+    padding: 1rem 0rem;
+    letter-spacing: 2px;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-101%);
+    }
+}
+.knowledgeCard{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card{
+    /* border: 1px solid black;
+     */
+    box-shadow: 1px 1px 10px rgb(196, 196, 196);
+    width: 20rem;
+    /* display: inline-block; */
+    height: 10.2rem;
+    text-align: center;
+    /* flex-grow: 10; */
+    border-bottom: 1px solid blue;
+}
+
+.card:nth-of-type(2){
+    border-bottom: 1px solid red;
+    transform: translateY(-1rem);
+}
+
+.card:nth-of-type(3){
+    border-bottom: 1px solid green;
+}
+
+.journeyMap{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 98%;
+    margin-right: 2rem;
+}
+.education{
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+/* .education div:nth-of-type(1){
+    width: 40px;
+    height: 2px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: rgb(222, 29, 180);
+    text-align: center;
+    align-items: center;
+    border: 5px solid rgb(214, 214, 214);
+} */
+.education img{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgb(222, 29, 180);
+    border: 5px solid rgb(214, 214, 214);
+    /* width: 80%; */
+}
+
+.education div:nth-of-type(1){
+    background-color: rgb(242,243,247);
+    width: 65rem;
+    /* height: 8rem; */
+    /* display: inline; */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 2rem;
+
+}
+
+.education h3, .mapInfo h3{
+    font-weight: lighter;
+}
+
+.education h3 span{
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.college img{
+    background-color: rgb(249, 191, 63);
+}
+
+.route{
+    background-color: rgb(242,243,247);
+    width: 0.3rem;
+    /* align-self: center; */
+    height: 10rem;
+    /* margin-left: 1rem; */
+    position: absolute;
+    bottom: -57rem;
+    margin-left: 1.3rem;
+    visibility: hidden;
+
+}
+
+/* .college div:nth-of-type(1){
+    background-color: rgb(249, 191, 63);
+} */
+
+/* .map{
+    width: 3%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+}
+
+.map img{
+    background-color: rebeccapurple;
+    border: 5px solid whitesmoke;
+    width: 2rem;
+    padding: 0.3rem;
+    border-radius: 2rem;
+}
+
+.mapInfo div{
+    background-color: rgb(242,243,247);
+    padding-left: 2rem;
+    margin-right: 3rem;
+}
+
+.mapInfo div:nth-of-type(2){
+    margin-top: 5rem;
+}
+
+.mapInfo h3 span{
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.journeyRoute{
+    display: flex;
+    justify-content: space-between;
+} */
+@media only screen and (max-width: 1273px){
+    .app{
+        flex-direction: column;
+    }
+    .main{
+        padding-left: 0%;
+        width: 100%;
+    }
+    nav{
+        visibility: visible;
+    }
+    nav div{
+        transition: all 1s ease;
+    }
+    .sideMenu{
+        top: -100rem;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .show{
+        position: relative;
+        visibility: visible;
+        top: 0;
+        transition: all 1s ease;
+    }
+    .card:nth-of-type(2){
+        transform: translateY(0rem);
+    }
+    .card{
+        margin-top: 1rem;
+    }
+    .slider img{
+        width: 100vw;
+        height: 98vh;
+    }
+
+}
+
+@media only screen and (max-width: 1100px){
+    .card{
+        width: 90%;
+        height: 12rem;
+        margin-right: 2rem;
+    }
+    .education div:nth-of-type(1){
+        min-width: 13.5rem;
+
+    }
+    .slide1 div, .slide2 div{
+        font-size: 1.5rem;
+    }
+    /* .show .socialMedia{
+        margin-left: 40%;
+        transform: translateX(-50%);
+    } */
+}
+
+@media only screen and (max-width: 415px) {
+    .education{
+        display: flex;
+        flex-direction: column;
+    }
+    /* .show .socialMedia{
+        margin-left: 30%;
+        transform: translateX(-50%);
+    } */
+    .education div:nth-of-type(1){
+        width: 100%;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        padding-right: 1rem;
+        margin-top: 1rem;
+        padding-left: 1rem;
+    }
+    .education h3{
+        font-size: 1rem;
+    }
+    .content{
+        padding-left: 1rem;
+    }
+    .education img{
+        align-self: center;
+    }
+    .journeyMap{
+        width: 85%;
+        margin-right: 2rem;
+    }
+    .imageText1{
+        /* position: relative;
+        top: -19rem;
+        color: white; */
+        /* transform: translate(-50%, -50%); */
+        left: 36%;
+    }
+    .imageText2{
+        text-align: center;
+        position: relative;
+        top: -60%;
+        left: 1%;
+    }
+}
