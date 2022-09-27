@@ -25,9 +25,9 @@ nav.addEventListener("click", ()=>{
     navcontent.classList.toggle("show")
 })
 cvBtn.addEventListener("click", ()=>{
-    let resume = window.open("D:/Material/portfolio website/Resume2.pdf")
+    let resume = window.open("Resume up.pdf")
     resume.document.title = "Resume"
 })
 gettouch.addEventListener("click", ()=>{
-    location.href = "mailto:manojoff21@gmail.com"
+    location.href = "mailto:manojmk27@outlook.com"
 })
