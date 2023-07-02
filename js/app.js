@@ -6,6 +6,7 @@ const nav = document.querySelector("nav")
 const navcontent = document.querySelector(".sideMenu")
 const cvBtn = document.querySelector("#cvbtn")
 const gettouch = document.querySelector(".touch")
+// const pcard = document.querySelectorAll(".pcard")
 
 // button.addEventListener("click", ()=>{
 //     slide1.classList.remove("selected")
