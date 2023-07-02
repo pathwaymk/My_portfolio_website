@@ -1,7 +1,17 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .app{
     width: 100%;
     font-family: "Quicksand", "sans-serif";
+    scroll-behavior: smooth;
 }
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+  }
 nav{
     position: absolute;
     z-index: 100;
@@ -123,7 +133,7 @@ body{
 
 .touch{
     margin-top: 2rem;
-    margin-left: 20%;
+    /* margin-left: 20%; */
     font-family: "Quicksand", "sans-serif" !important;
     font-weight: bold;
     font-size: 1.5rem;
@@ -231,6 +241,7 @@ h2{
 h3{
     padding: 1rem 0rem;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 @keyframes scroll{
@@ -241,34 +252,53 @@ h3{
         transform: translateX(-101%);
     }
 }
+
 .knowledgeCard{
+    /* border: 1px solid black; */
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 2rem;
     flex-wrap: wrap;
-    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    width: 96%;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px rgb(196, 196, 196);
 }
 
 .card{
-    /* border: 1px solid black;
-     */
-    box-shadow: 1px 1px 10px rgb(196, 196, 196);
-    width: 20rem;
-    /* display: inline-block; */
-    height: 10.2rem;
+    /* border: 1px solid black; */
+    width: 30em;
+    /* margin-top: 1rem;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem; */
     text-align: center;
-    /* flex-grow: 10; */
-    border-bottom: 1px solid blue;
+}
+.card div{
+    width: 6rem;
+    height: 3.5rem;
+    margin: auto;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px rgb(196, 196, 196);
 }
 
-.card:nth-of-type(2){
-    border-bottom: 1px solid red;
-    transform: translateY(-1rem);
+.card div img{
+    padding-top: 10%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.card:nth-of-type(3){
-    border-bottom: 1px solid green;
+/* .card img{
+    width: 100%;
+    object-fit: cover;
+} */
+
+.card h3{
+    margin: 0rem;
 }
+
+
 
 .journeyMap{
     display: flex;
@@ -276,21 +306,11 @@ h3{
     width: 98%;
     margin-right: 2rem;
 }
+
 .education{
     display: flex;
-    /* justify-content: space-around; */
 }
 
-/* .education div:nth-of-type(1){
-    width: 40px;
-    height: 2px;
-    border-radius: 50%;
-    z-index: 2;
-    background-color: rgb(222, 29, 180);
-    text-align: center;
-    align-items: center;
-    border: 5px solid rgb(214, 214, 214);
-} */
 .education img{
     width: 35px;
     height: 35px;
@@ -338,44 +358,28 @@ h3{
 
 }
 
-/* .college div:nth-of-type(1){
-    background-color: rgb(249, 191, 63);
-} */
-
-/* .map{
-    width: 3%;
+.projectCard{
     display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-}
-
-.map img{
-    background-color: rebeccapurple;
-    border: 5px solid whitesmoke;
-    width: 2rem;
-    padding: 0.3rem;
-    border-radius: 2rem;
-}
-
-.mapInfo div{
-    background-color: rgb(242,243,247);
-    padding-left: 2rem;
-    margin-right: 3rem;
-}
-
-.mapInfo div:nth-of-type(2){
-    margin-top: 5rem;
-}
-
-.mapInfo h3 span{
-    font-size: 1rem;
-    opacity: 0.5;
-}
-
-.journeyRoute{
-    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-} */
+}
+
+.pcard{
+    box-shadow: 1px 1px 1px rgb(196, 196, 196);
+    padding: 1%;
+    margin-top: 1rem;
+    width: 95%;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+}
+
+.pcard:hover{
+    box-shadow: 1px 1px 10px rgb(196, 196, 196);
+    background-color: rgb(233, 235, 242);
+}
+
+
 @media only screen and (max-width: 1273px){
     .app{
         flex-direction: column;
@@ -432,10 +436,6 @@ h3{
     .slide1 div, .slide2 div{
         font-size: 1.5rem;
     }
-    /* .show .socialMedia{
-        margin-left: 40%;
-        transform: translateX(-50%);
-    } */
 }
 
 @media only screen and (max-width: 415px) {
@@ -443,10 +443,6 @@ h3{
         display: flex;
         flex-direction: column;
     }
-    /* .show .socialMedia{
-        margin-left: 30%;
-        transform: translateX(-50%);
-    } */
     .education div:nth-of-type(1){
         width: 100%;
         margin-left: 0rem;
